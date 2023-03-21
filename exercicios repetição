@@ -46,6 +46,22 @@ func main() {
 # Repetição 6
 package main
 
+import "fmt"
+
+func main() {
+	n := 0
+	mult := 0
+	fmt.Println("Digite um número para ver sua taboada: ")
+	fmt.Scan(&n)
+	for i := 1; i <= 10; i++ {
+		mult = n * i
+		fmt.Printf("%d X %d = %d\n", n, i, mult)
+	}
+}
+
+# Repetição 7
+package main
+
 func main() {
 	for i := 1; i <= 100; i += 1 {
 		if (i%3 == 0) && (i%5 == 0) {
@@ -60,7 +76,77 @@ func main() {
 	}
 }
 
-# Repetição 7
 # Repetição 8
+package main
+
+import "fmt"
+
+func main() {
+	n := 0
+	fmt.Println("Digite um número para ver seus divisores: ")
+	fmt.Scan(&n)
+	fmt.Println("Os divisores do número são: ")
+	for i := 1; i <= n; i++ {
+		if n%i == 0 {
+			print(i, " ")
+		}
+	}
+}
+
 # Repetição 9
+package main
+
+import "fmt"
+
+func main() {
+	n := 0.0
+	resp := ""
+	count := 0.0
+	soma := 0.0
+	med := 0.0
+	for true {
+		fmt.Println("Digite um número: ")
+		fmt.Scan(&n)
+		count++
+		soma += n
+		fmt.Println("Deseja continuar [S/N] ?")
+		fmt.Scan(&resp)
+		if resp == "N" || resp == "n" {
+			break
+		}
+	}
+	med = soma / count
+	fmt.Printf("A média dos números é %.2f", med)
+}
+
 # Repetição 10
+package main
+
+import "fmt"
+
+func main() {
+	n := 0
+	count := 0
+	men := 0
+	mai := 0
+	for true {
+		fmt.Println("Digite um número: ")
+		fmt.Scan(&n)
+		count++
+
+		if count == 1 {
+			mai = n
+			men = n
+		}
+		if n > mai {
+			mai = n
+		} else if men > n {
+			men = n
+		}
+
+		if n == 0 {
+			break
+		}
+	}
+	fmt.Printf("O maior número digitado foi %d", mai)
+}
