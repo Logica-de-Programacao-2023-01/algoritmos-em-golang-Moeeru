@@ -1,0 +1,66 @@
+# Repetição 1
+package main
+
+func main() {
+	for i := 0; i <= 10; i += 1 {
+		println(i)
+	}
+}
+
+# Repetição 2
+package main
+
+func main() {
+	for i := 0; i <= 20; i += 2 {
+		print(i, "-")
+	}
+}
+
+# Repetição 3
+package main
+
+func main() {
+	for i := 1; i <= 19; i += 2 {
+		print(i, "-")
+	}
+}
+
+# Repetição 4
+package main
+
+func main() {
+	for i := 0; i <= 30; i += 3 {
+		print(i, "-")
+	}
+}
+
+# Repetição 5
+package main
+
+func main() {
+	for i := 10; i >= 1; i -= 1 {
+		print(i, "-")
+	}
+}
+
+# Repetição 6
+package main
+
+func main() {
+	for i := 1; i <= 100; i += 1 {
+		if (i%3 == 0) && (i%5 == 0) {
+			print(" fizzbuzz ")
+		} else if i%5 == 0 {
+			print(" Buzz ")
+		} else if i%3 == 0 {
+			print(" fizz ")
+		} else {
+			print(i, " ")
+		}
+	}
+}
+
+# Repetição 7
+# Repetição 8
+# Repetição 9
+# Repetição 10
