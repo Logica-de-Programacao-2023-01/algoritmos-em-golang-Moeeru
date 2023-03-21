@@ -1,0 +1,254 @@
+# Seleção 1
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	n1 := 0
+	fmt.Println("Digite um número: ")
+	fmt.Scan(&n1)
+	n2 := 0
+	fmt.Println("Digite um número: ")
+	fmt.Scan(&n2)
+	if n1 > n2 {
+		fmt.Println("O número ", n1, "é maior que ", n2)
+	} else {
+		fmt.Println("O número ", n2, "é maior que ", n1)
+	}
+}
+
+# Seleção 2
+package main
+
+import "fmt"
+
+func main() {
+	n1 := 0
+	fmt.Println("Digite um número: ")
+	fmt.Scan(&n1)
+	n2 := 0
+	fmt.Println("Digite um número: ")
+	fmt.Scan(&n2)
+	n3 := 0
+	fmt.Println("Digite um número: ")
+	fmt.Scan(&n3)
+	if n1 > n2 {
+		if n2 > n3 {
+			fmt.Println("O número ", n3, "é menor de todos ")
+		} else {
+			fmt.Println("O número ", n2, "é menor de todos ")
+		}
+	} else if n2 > n1 {
+		if n1 > n3 {
+			fmt.Println("O número ", n3, "é menor de todos ")
+		} else {
+			fmt.Println("O número ", n1, "é menor de todos ")
+		}
+	}
+}
+
+# Seleção 3
+package main
+
+import "fmt"
+
+func main() {
+	pair := 0
+	n := 0
+	fmt.Println("DIgite um número para ver se é par ou impar: ")
+	fmt.Scan(&n)
+	pair = n % 2
+	if pair == 0 {
+		fmt.Println("O número é par ")
+	} else {
+		fmt.Println("O número é impar ")
+	}
+}
+
+# Seleção 4
+package main
+
+import "fmt"
+
+func main() {
+	sex := ""
+	alt := 0.0
+	peso := 0.0
+	imc := 0.0
+	fmt.Println("Digite seu sexo [M/F]: ")
+	fmt.Scan(&sex)
+	fmt.Println("Digite sua altura: ")
+	fmt.Scan(&alt)
+	fmt.Println("Digite seu peso: ")
+	fmt.Scan(&peso)
+	imc = peso / (alt * alt)
+	if sex == "M" {
+		if imc < 20.7 {
+			fmt.Println("Você está abaixo do peso")
+		} else if 20.7 <= imc && imc <= 26.4 {
+			fmt.Println("Vc está no peso ideal")
+		} else if 26.5 <= imc && imc <= 27.8 {
+			fmt.Println("Vc está um pouco acima do peso")
+		} else if 27.9 <= imc && imc <= 31.1 {
+			fmt.Println("Vc está acima do peso")
+		} else if imc > 31.2 {
+			fmt.Println("Vc está com obesidade")
+		}
+	} else {
+		if imc < 19.1 {
+			fmt.Println("Você está abaixo do peso")
+		} else if 19.1 <= imc && imc <= 25.8 {
+			fmt.Println("Vc está no peso ideal")
+		} else if 25.9 <= imc && imc <= 27.3 {
+			fmt.Println("Vc está um pouco acima do peso")
+		} else if 27.4 <= imc && imc <= 32.3 {
+			fmt.Println("Vc está acima do peso")
+		} else if imc > 32.4 {
+			fmt.Println("Vc está com obesidade")
+		}
+	}
+}
+
+# Seleção 5
+package main
+
+import "fmt"
+
+func main() {
+	m3 := 0
+	m5 := 0
+	n := 0
+	fmt.Println("digite um número para ver se é multiplo de 3 e/ou 5:")
+	fmt.Scan(&n)
+	m3 = n % 3
+	m5 = n % 5
+	if m3 == 0 && m5 == 0 {
+		fmt.Println("O número", n, " é multiplo de 3 e 5")
+	} else if m3 == 0 && !(m5 == 0) {
+		fmt.Println("O número", n, " é multiplo apenas de 3")
+	} else if m5 == 0 && !(m3 == 0) {
+		fmt.Println("O número", n, " é multiplo apenas de 5")
+	} else {
+		fmt.Println("O número", n, " não é multiplo de 3 e 5")
+	}
+}
+
+# Seleção 6
+package main
+
+import "fmt"
+
+func main() {
+	n1 := 0
+	n2 := 0
+	m := 0
+	s := 0
+	fmt.Println("Digite um número: ")
+	fmt.Scan(&n1)
+	fmt.Println("Digite um número: ")
+	fmt.Scan(&n2)
+	if n1 > 0 && n2 > 0 {
+		m = n1 * n2
+		fmt.Printf("A multiplicação dos números positivos %d e %d resulta em %d", n1, n2, m)
+	} else if n1 < 0 || n2 < 0 {
+		s = n1 + n2
+		fmt.Printf("A soma dos números %d e %d resulta em %d", n1, n2, s)
+	}
+}
+
+# Seleção 7
+package main
+
+import "fmt"
+
+func main() {
+	sal := 0.0
+	sal2 := 0.0
+	fmt.Println("Digite o seu salário para calcular seu aumento: ")
+	fmt.Scan(&sal)
+
+	if sal < 1000 {
+		sal2 = sal * 1.1
+		fmt.Printf("Seu salário de %.2f foi aumentado para %.2f", sal, sal2)
+	} else if sal >= 1000 {
+		sal2 = sal * 1.05
+		fmt.Printf("Seu salário de %.2f foi aumentado para %.2f", sal, sal2)
+	}
+}
+
+# Seleção 8
+package main
+
+import "fmt"
+
+func main() {
+	dia := 0
+	fmt.Println("Digite um número para ver o dia da semana: ")
+	fmt.Scan(&dia)
+	switch dia {
+	case 1:
+		fmt.Println("Hoje é domingo ")
+	case 2:
+		fmt.Println("Hoje é segunda ")
+	case 3:
+		fmt.Println("Hoje é terça ")
+	case 4:
+		fmt.Println("Hoje é quarta ")
+	case 5:
+		fmt.Println("Hoje é quinta ")
+	case 6:
+		fmt.Println("Hoje é sexta ")
+	case 7:
+		fmt.Println("Hoje é sabado ")
+	}
+}
+# Seleção 9
+package main
+
+import "fmt"
+
+func main() {
+	n1 := 0
+	fmt.Println("Digite um número: ")
+	fmt.Scan(&n1)
+	n2 := 0
+	fmt.Println("Digite um número: ")
+	fmt.Scan(&n2)
+	n3 := 0
+	fmt.Println("Digite um número: ")
+	fmt.Scan(&n3)
+	if n1 > n2 && n1 > n3 {
+		if n2 > n3 {
+			fmt.Println("A ordem crescente dos números é ", n3, n2, n1)
+		} else {
+			fmt.Println("A ordem crescente dos números é ", n2, n3, n1)
+		}
+	} else if n1 < n2 && n1 < n3 {
+		if n2 < n3 {
+			fmt.Println("A ordem crescente dos números é ", n1, n2, n3)
+		} else {
+			fmt.Println("A ordem crescente dos números é ", n1, n3, n2)
+		}
+	}
+}
+# Seleção 10
+package main
+
+import "fmt"
+
+func main() {
+	idade := 0
+	fmt.Println("Digite sua idade: ")
+	fmt.Scan(&idade)
+	if idade <= 9 {
+		fmt.Println("Você é mirim ")
+	} else if idade >= 10 && idade <= 13 {
+		fmt.Println("Você é infatil ")
+	} else if idade >= 14 && idade <= 17 {
+		fmt.Println("Você é juvenil ")
+	} else {
+		fmt.Println("Você é adulto ")
+	}
+}
