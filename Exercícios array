@@ -48,9 +48,10 @@ func main() {
 		lista = append(lista, extra)
 		soma += extra
 	}
-	med = soma / 6
+	med = soma / float64(len(lista))
 	fmt.Printf("Na lista %f temos como média dos números %.2f", lista, med)
 }
+
 
 #Exeercicio 5
 package main
