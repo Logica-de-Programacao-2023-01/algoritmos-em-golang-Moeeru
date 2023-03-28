@@ -63,7 +63,7 @@ func main() {
 	elemento2 := 0
 	for linha := range matriz {
 		for coluna := range matriz[linha] {
-			elemento2 = (coluna + 1) + (linha + 1)
+			elemento2 = coluna + linha
 			matriz[linha][coluna] = elemento2
 		}
 	}
